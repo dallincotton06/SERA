@@ -1,0 +1,15 @@
+
+/* Style for buttons */
+.button {
+    -fx-background-color: #4CAF50; /* Button color */
+    -fx-text-fill: white; /* Text color */
+    -fx-min-height: 50px; /* Minimum height for buttons */
+    -fx-max-width: Infinity; /* Allow buttons to grow in width */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded background */
+}
+
+/* Change the button color on hover */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}

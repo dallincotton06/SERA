@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="module_1_root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Back">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About SERA" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane prefHeight="371.0" prefWidth="640.0">
+               <content>
+                  <AnchorPane prefHeight="800.0" prefWidth="622.0">
+                     <children>
+                        <Accordion layoutX="17.0" layoutY="16.0" prefHeight="400.0" prefWidth="590.0">
+                           <panes>
+                              <TitledPane animated="false" text="Overview">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phishing">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea layoutX="10.0" layoutY="47.0" prefHeight="53.0" prefWidth="568.0" text="Phishing - The process of a threat actor sending email or text messages to manipulate people into downloading viruses, or sending their personal information to them.&#10;" wrapText="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="249.0" prefWidth="590.0" text="Vocabulary">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="588.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vocabulary">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea layoutX="7.0" layoutY="38.0" prefHeight="54.0" prefWidth="575.0" text="Clone Phishing: A type of phishing attack where a legitimate email that was previously sent is cloned and modified by the attacker, often by inserting malicious links or attachments.&#10;&#10;Vishing: Short for &quot;voice phishing,&quot; this scam involves attackers using phone calls to trick individuals into sharing sensitive information or performing fraudulent transactions.&#10;&#10;Smishing: Short for &quot;SMS phishing,&quot; this technique uses text messages to trick individuals into clicking on malicious links or revealing personal information.&#10;&#10;Spoofing: A tactic where an attacker disguises their identity or email address to appear as someone trustworthy, such as a legitimate business or a known contact." wrapText="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Learn: What is Social Engineering?">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="Quiz">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" prefHeight="11.0" prefWidth="584.0" text="What is phishing?" />
+                                          <RadioButton id="q1_a1" layoutX="33.0" layoutY="39.0" mnemonicParsing="false" text="A) special form of data science that helps with gathering information collection?">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="q1" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton id="q1_a2" layoutX="33.0" layoutY="64.0" mnemonicParsing="false" text="B) When threat actors break into a computer using a keylogger" toggleGroup="$q1" />
+                                          <RadioButton id="q1_a3" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" text="C) The act of sending an email or text message for the purpose of manipulating the target into leaking private information" toggleGroup="$q1" />
+                                          <RadioButton id="q1_a4" layoutX="33.0" layoutY="113.0" mnemonicParsing="false" text="D) A phis call to gain access to ip" toggleGroup="$q1" />
+                                          <Label id="q1_feedback" layoutX="17.0" layoutY="185.0" prefHeight="22.0" prefWidth="202.0" />
+                                          <Button id="q1_submit" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="199.0" text="Submit" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutX="10.0" layoutY="88.0" text="Quiz">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Which of the following is the primary objective of a phishing attack?" />
+                                          <RadioButton id="q1_a1" layoutX="33.0" layoutY="39.0" mnemonicParsing="false" text="A) To steal sensitive information by tricking users into revealing their personal details">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="q11" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton id="q1_a2" layoutX="33.0" layoutY="64.0" mnemonicParsing="false" text="B) To install malicious software on a user's computer through physical access" toggleGroup="$q11" />
+                                          <RadioButton id="q1_a3" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" text="C) To gain unauthorized access by following someone into a restricted area" toggleGroup="$q11" />
+                                          <RadioButton id="q1_a4" layoutX="33.0" layoutY="113.0" mnemonicParsing="false" text="D) To disable security systems through brute-force hacking techniques" toggleGroup="$q11" />
+                                          <Label id="q1_feedback" layoutX="17.0" layoutY="185.0" prefHeight="22.0" prefWidth="202.0" />
+                                          <Button id="q1_submit" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="199.0" text="Submit" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="230.0" prefWidth="592.0" text="What scenario would Deep Fakes be used to scam?">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0">
+                                             <header>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                                             </header>
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                                             </content>
+                                             <expandableContent>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                                             </expandableContent>
+                                          </DialogPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
