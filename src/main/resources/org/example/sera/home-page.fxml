@@ -56,7 +56,7 @@
                                     <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </TextArea>
-                              <Button id="module_2_link" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
+                              <Button id="module_2_link" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#module_2_linkAction" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -73,7 +73,7 @@
                                     <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </TextArea>
-                              <Button id="module_3_link" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
+                              <Button id="module_3_link" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" onAction="#module_3_linkAction" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -90,7 +90,7 @@
                                     <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </TextArea>
-                              <Button id="module_4_link" layoutX="11.0" layoutY="58.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
+                              <Button id="module_4_link" layoutX="11.0" layoutY="58.0" mnemonicParsing="false" onAction="#module_4_linkAction" prefHeight="28.0" prefWidth="587.0" text="Start Exercise" />
                            </children>
                         </AnchorPane>
                     </content>
