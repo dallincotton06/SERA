@@ -9,6 +9,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,14 +18,18 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
-<VBox id="module_1_root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sera.Controllers.Module1Controller">
+<VBox id="module_1_root" fx:id="module_1_root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sera.Controllers.Module1Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
-            <Menu mnemonicParsing="false" text="Back">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
+            <Menu mnemonicParsing="false" text=" ">
+               <graphic>
+                  <Button fx:id="back" mnemonicParsing="false" prefHeight="10.0" text="Back">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Button>
+               </graphic>
             </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
@@ -33,76 +38,86 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane id="mod1" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-         <children>
-            <ScrollPane prefHeight="371.0" prefWidth="640.0">
-               <content>
-                  <AnchorPane prefHeight="800.0" prefWidth="622.0">
-                     <children>
-                        <Accordion layoutX="17.0" layoutY="16.0" prefHeight="400.0" prefWidth="590.0">
-                          <panes>
-                            <TitledPane animated="false" text="Overview">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social Engineering">
-                                             <font>
-                                                <Font size="24.0" />
-                                             </font>
-                                          </Text>
-                                          <TextArea layoutX="10.0" layoutY="47.0" prefHeight="53.0" prefWidth="568.0" text="Social Engineering is the use of deception from one person to another to access sensitive information illegally. " wrapText="true" />
-                                       </children>
-                                    </AnchorPane>
-                              </content>
-                            </TitledPane>
-                            <TitledPane animated="false" prefHeight="249.0" prefWidth="590.0" text="Vocabulary">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="588.0">
-                                       <children>
-                                          <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vocabulary">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                          </Text>
-                                          <TextArea layoutX="7.0" layoutY="38.0" prefHeight="54.0" prefWidth="575.0" text="Threat Actor - Individuals that use social engineering and technology to access sensitive information illegally. " wrapText="true" />
-                                       </children>
-                                    </AnchorPane>
-                              </content>
-                            </TitledPane>
-                            <TitledPane animated="false" text="Learn: What is Social Engineering?">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <WebView layoutX="95.0" layoutY="36.0" prefHeight="200.0" prefWidth="397.0" fx:id="webView"/>
-                                       </children></AnchorPane>
-                              </content>
-                            </TitledPane>
-                              <TitledPane animated="false" text="Quiz">
-                                <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                       <children>
-                                          <Label layoutX="14.0" layoutY="14.0" text="1) What is the Capital of France?" />
-                                          <RadioButton id="q1_a1" layoutX="33.0" layoutY="39.0" mnemonicParsing="false" text="New York">
-                                             <toggleGroup>
-                                                <ToggleGroup fx:id="q1" />
-                                             </toggleGroup>
-                                          </RadioButton>
-                                          <RadioButton id="q1_a2" layoutX="33.0" layoutY="64.0" mnemonicParsing="false" text="London" toggleGroup="$q1" />
-                                          <RadioButton id="q1_a3" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" text="Paris" toggleGroup="$q1" />
-                                          <RadioButton id="q1_a4" layoutX="33.0" layoutY="113.0" mnemonicParsing="false" text="Sydney" toggleGroup="$q1" />
-                                          <Label id="q1_feedback" fx:id="q1_feedback" layoutX="17.0" layoutY="185.0" prefHeight="22.0" prefWidth="555.0" />
-                                          <Button id="q1_submit" fx:id="q1_submit" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="199.0" text="Submit" />
-                                       </children>
-                                    </AnchorPane>
-                                </content>
-                              </TitledPane>
-                          </panes>
-                        </Accordion>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
-         </children>
-    </AnchorPane>
+      <ScrollPane prefHeight="371.0" prefWidth="640.0">
+         <content>
+            <AnchorPane prefHeight="800.0" prefWidth="622.0">
+               <children>
+                  <Accordion layoutX="17.0" layoutY="16.0" prefHeight="450.0" prefWidth="590.0">
+                    <panes>
+                      <TitledPane animated="false" text="Overview">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social Engineering">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <TextArea editable="false" layoutX="10.0" layoutY="47.0" prefHeight="94.0" prefWidth="568.0" text="Social Engineering is the use of deception from one person to another to access sensitive information illegally.  Social Engineering can be done in many forms and is usually very hard to detect. Common forms include Phishing, Vishing, Deep Faking, Honey Trapping, and Piggybacking/Tailgating.&#10;&#10;It often is hard to detect the many forms of Social Engineering  when you may be working on your job, scrolling the internet, or even talking to friends or family online. In this module we will work on understanding exactly why Social Engineering is used over traditional hacking." wrapText="true" />
+                                    <Label layoutX="10.0" layoutY="144.0" text="1) What is NOT a Method of social engineering?" />
+                                    <RadioButton id="q1_a1" layoutX="25.0" layoutY="169.0" mnemonicParsing="false" text="A) Phishing">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="q1" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton id="q1_a1" layoutX="25.0" layoutY="195.0" mnemonicParsing="false" text="B) Vishing" toggleGroup="$q1" />
+                                    <RadioButton id="q1_a1" layoutX="25.0" layoutY="223.0" mnemonicParsing="false" text="C) Kishing" toggleGroup="$q1" />
+                                    <RadioButton id="q1_a1" layoutX="25.0" layoutY="248.0" mnemonicParsing="false" text="D) Piggybacking" toggleGroup="$q1" />
+                                    <Label id="q1_feedback" fx:id="q1_feedback" layoutX="10.0" layoutY="312.0" prefHeight="22.0" prefWidth="555.0" />
+                                    <Button id="q1_submit" fx:id="q1_submit" layoutX="11.0" layoutY="272.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="199.0" text="Submit" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" prefHeight="249.0" prefWidth="590.0" text="Vocabulary">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="588.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vocabulary">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextArea editable="false" layoutX="7.0" layoutY="38.0" prefHeight="150.0" prefWidth="575.0" text="Threat Actor - Individuals that use social engineering and technology to access sensitive information illegally. &#10;Confidence trick - A type of deception aimed at persuading someone to part with money or sensitive information.&#10;Applied social science - The management of human beings in accordance with their place and function in society, which is a broader definition of social engineering." wrapText="true" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Learn: What is Social Engineering?">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="q2" layoutX="14.0" layoutY="219.0" prefHeight="28.0" prefWidth="452.0" promptText="Format: **** ***** ********" />
+                                    <Text layoutX="14.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who was called in order to gain access to sensitive information?" />
+                                    <Button fx:id="q2_submit" layoutX="479.0" layoutY="219.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="102.0" text="Submit" />
+                                    <TextField fx:id="q3" layoutX="14.0" layoutY="282.0" prefHeight="28.0" prefWidth="452.0" promptText="Format: ********** ********, *******, *****" />
+                                    <Text layoutX="14.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are the three traits of a social engineer?" />
+                                    <Button fx:id="q3_submit" layoutX="479.0" layoutY="282.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="102.0" text="Submit" />
+                                    <WebView fx:id="video_1" layoutX="14.0" layoutY="14.0" prefHeight="176.0" prefWidth="269.0" />
+                                    <WebView fx:id="video_2" layoutX="297.0" layoutY="14.0" prefHeight="179.0" prefWidth="277.0" />
+                                    <Label fx:id="q2_feedback" layoutX="14.0" layoutY="247.0" prefHeight="18.0" prefWidth="566.0" />
+                                    <Label fx:id="q3_feedback" layoutX="14.0" layoutY="301.0" prefHeight="18.0" prefWidth="566.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane animated="false" text="Summary and Credits">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" />
+                                    <TextArea editable="false" layoutX="14.0" layoutY="14.0" prefHeight="159.0" prefWidth="546.0" text="Thanks for walking through this module all the way through. For more in depth methods of social engineering check out future modules on Phishing, Vishing, Honey Trapping, Deep Faking, and Piggybacking/Tailgating.&#10;&#10;Credits: &#10;Dallin Cotton (dallincotton06)&#10;Thomas Moore (X-DataBreach-X)&#10;Austin Willis" wrapText="true" />
+                                    <Button fx:id="complete" layoutX="14.0" layoutY="186.0" mnemonicParsing="false" text="Complete Module" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+    <AnchorPane id="mod1" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
   </children>
 </VBox>

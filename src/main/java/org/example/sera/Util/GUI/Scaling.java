@@ -21,7 +21,9 @@ public final class Scaling {
 
         scale.xProperty().bind(SERAApplication.getStage().widthProperty().divide(initialWidth));
         scale.yProperty().bind(SERAApplication.getStage().heightProperty().divide(initialHeight));
+        Scene scene = new Scene(root, 320, 240);
+        scene.getStylesheets().add(SERAApplication.class.getResource("style.css").toExternalForm());
 
-        return new Scene(root, 320, 240);
+        return scene;
     }
 }
