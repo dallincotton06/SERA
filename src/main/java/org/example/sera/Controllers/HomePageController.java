@@ -42,4 +42,19 @@ public class HomePageController {
         Scene scene = Scaling.createScalableGUI(new FXMLLoader(SERAApplication.class.getResource("module_1_social_engineering.fxml")), 640, 400);
         SERAApplication.navigate(scene);
     }
+    @FXML
+    private void module_2_linkAction() throws IOException {
+        Scene scene = Scaling.createScalableGUI(new FXMLLoader(SERAApplication.class.getResource("module_2_phishing.fxml")), 640, 400);
+        SERAApplication.navigate(scene);
+    }
+    @FXML
+    private void module_3_linkAction() throws IOException {
+        Scene scene = Scaling.createScalableGUI(new FXMLLoader(SERAApplication.class.getResource("module_3_deep_fakes.fxml")), 640, 400);
+        SERAApplication.navigate(scene);
+    }
+    @FXML
+    private void module_4_linkAction() throws IOException {
+        Scene scene = Scaling.createScalableGUI(new FXMLLoader(SERAApplication.class.getResource("module_4_piggybacking.fxml")), 640, 400);
+        SERAApplication.navigate(scene);
+    }
 }
