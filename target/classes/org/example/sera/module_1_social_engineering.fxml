@@ -15,8 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
 
-<VBox id="module_1_root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sera.Controllers.Module1Controller">
+<VBox id="module_1_root" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sera.Controllers.Module1Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -70,7 +71,10 @@
                             </TitledPane>
                             <TitledPane animated="false" text="Learn: What is Social Engineering?">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <WebView layoutX="95.0" layoutY="36.0" prefHeight="200.0" prefWidth="397.0" fx:id="webView"/>
+                                       </children></AnchorPane>
                               </content>
                             </TitledPane>
                               <TitledPane animated="false" text="Quiz">

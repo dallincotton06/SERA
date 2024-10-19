@@ -16,7 +16,6 @@ public class SERAApplication extends Application {
         SERAApplication.stage = stage;
         Scene scene = Scaling.createScalableGUI(new FXMLLoader(SERAApplication.class.getResource("home-page.fxml")), 638, 374);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-
         SERAApplication.stage.setTitle("Social Engineering Resistance Application");
         SERAApplication.stage.setScene(scene);
         SERAApplication.stage.show();

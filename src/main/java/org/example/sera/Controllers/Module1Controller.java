@@ -7,8 +7,12 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.example.sera.Util.ModuleUtils;
+import javafx.scene.web.WebView;
 
 public class Module1Controller {
+
+    @FXML
+    WebView webView;
 
     @FXML
     ToggleGroup q1;
@@ -25,5 +29,8 @@ public class Module1Controller {
     @FXML
     public void initialize() {
         ModuleUtils.registerMultipleChoiceQuestion(module_1_root, q1, q1_submit, q1_feedback, "Paris");
+        webView.getEngine().load("https://www.youtube.com/embed/uvKTMgWRPw4?si=LqaG8lQMUXaL_HlO");
     }
+
+
 }

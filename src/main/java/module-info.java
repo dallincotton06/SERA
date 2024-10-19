@@ -1,6 +1,6 @@
 module org.example.sera {
-    requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.web;
 
 
     opens org.example.sera to javafx.fxml;
